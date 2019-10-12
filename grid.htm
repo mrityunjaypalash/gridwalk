@@ -184,10 +184,14 @@ var controller = {
         reportView.renderErrors(msg);
     },
     reset: function () {
-        this.clearOriginalRobot();
+        //this.clearOriginalRobot();
+        //inputView.reset();
+        canvasView.context.clearRect(0, 0, canvasView.canvas.width, canvasView.canvas.height);
+        //canvasView.init();
+        canvasView.renderCanvas2();
         this.setCurrentRobot(model.init);
         canvasView.renderRobot();
-        inputView.reset();
+        
     }
 };
 
